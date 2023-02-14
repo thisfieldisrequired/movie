@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from movies.views import movie_view, example_view
+from movies.views import movie_view, example_view, custom_handler_404
 
 
 urlpatterns = [
@@ -23,3 +23,5 @@ urlpatterns = [
     path('movie/<int:movie_id>', movie_view, name='main'),
     path('example/', example_view),
 ]
+
+handler404 = custom_handler_404
